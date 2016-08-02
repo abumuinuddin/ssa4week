@@ -13,15 +13,14 @@ var rockPaperScissor ={Rock: 1, Paper :2, Scissor :3 };
 alert('Rock Paper Scissor Game');
 var name = prompt ('Enter your name');
 
-userChoice= prompt ('Enter your choice: \n 1. Rock \n 2. Paper \n 3. Scissors');
-userChoice = parseInt(userChoice);
-//alert(userChoice);
 
-while (userChoice !== 1 && userChoice !==2  && userChoice !==3) {
-	userChoice= prompt ('Please Enter again valid choices are: \n 1. Rock \n 2. Paper \n 3. Scissors');
-
+do {
+	
+	userChoice= prompt ('Please Enter your choices: \n 1. Rock \n 2. Paper \n 3. Scissors');
+	userChoice = parseInt(userChoice);
 	console.log('you win');
-}
+
+} while (userChoice !== 1 && userChoice !==2  && userChoice !==3)
 
 computerChoice= getRandomInt(min, max);
 
@@ -62,24 +61,6 @@ if (userChoice == computerChoice)
 		            console.log( "You win.");
 		        }
 		    }
-
-
-
-//prompt ('Enter your choice: 1- Rock, 2- Paper, 3-Scissors');
-/*
-while (userChoice!='Rock' || userChoice!='Paper' ||  userChoice!='Scissor'){
-
-	userChoice= prompt ('Enter your choice: \n 1. Rock \n 2. Paper \n 3. Scissors');
-}*/
-
-
-
-//if (computerChoice==)
-//console.log(Math.floor(Math.random()*3));
-
-
-
-
 
 
 // Returns a random integer between min (included) and max (excluded)
