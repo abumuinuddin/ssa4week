@@ -1,0 +1,4 @@
+Mode 2 development --
+Day 1- Java/HTML/JavaScript
+Day 2 : AJAX
+Day 3-4: java

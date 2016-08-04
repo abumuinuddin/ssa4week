@@ -1,0 +1,72 @@
+package gov.ssa.iron.yard.example;
+
+
+
+import java.io.*;
+
+public class ReadWriteFile {
+
+	public static void main(String[] args) {
+        
+		String fileName = "word.txt";
+
+		readFile(fileName);
+		
+		
+		try {
+            // Assume default encoding.
+            FileWriter fileWriter = new FileWriter(fileName);
+
+            // Always wrap FileWriter in BufferedWriter.
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+            // Note that write() does not automatically
+            // append a newline character.
+            bufferedWriter.write("Mode 2 development --");
+            bufferedWriter.newLine();
+            bufferedWriter.write("Day 1- Java/HTML/JavaScript");
+            bufferedWriter.newLine();
+            bufferedWriter.write("Day 2 : AJAX");
+            bufferedWriter.newLine();
+            bufferedWriter.write("Day 2: node j");
+
+            // Always close files.
+            bufferedWriter.close();
+        }
+        catch(IOException ex) {
+        	
+            System.out.println("Error writing to file '" + fileName + "'");
+            ex.printStackTrace(System.err);
+            
+        }
+        
+
+	}
+
+	private static void readFile(String fileName) {
+		String line;
+		try {
+            FileReader fileReader = new FileReader(fileName);
+
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+            while((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }   
+
+            bufferedReader.close();         
+        }
+        catch(FileNotFoundException ex) {
+            System.out.println("Unable to locate file :'" + fileName + "'");                
+        }
+        catch(IOException ex) {
+            
+        	System.out.println("Unable to Read file : '"  + fileName + "'");                  
+            ex.printStackTrace();
+            
+        }
+	}
+
+}
+
+

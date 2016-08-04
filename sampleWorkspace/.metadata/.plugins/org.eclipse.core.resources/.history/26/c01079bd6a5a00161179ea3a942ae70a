@@ -1,0 +1,16 @@
+package gov.ssa.iron.yard.example;
+
+
+
+import java.io.*;
+
+public class ReadWriteFile {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+

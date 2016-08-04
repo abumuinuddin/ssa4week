@@ -1,0 +1,107 @@
+package gov.ssa.iron.yard.example;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+// ==============================================
+// Reads lines of text from some input file, 
+// sorts the string list data, and writes to an output file.
+
+public class ReadSortWrite {
+
+    public static void readSortWrite(String path, Writer w) {
+
+
+    }
+
+	private static List<String> readAndSort(FileInputStream fileInputStream,
+			BufferedReader bufferedReader) {
+		List<String> stringList = new ArrayList<String>();
+		try {
+            fileInputStream = new FileInputStream("words.txt");
+            bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
+            String line = bufferedReader.readLine();
+
+            // Read each line of file into array list.
+            
+            while (line != null) {
+                stringList.add(line);
+                line = bufferedReader.readLine();
+            }
+            bufferedReader.close();
+            // Sort array of strings
+            /*
+
+            */
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                bufferedReader.close();
+                fileInputStream.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+		return stringList;
+	}
+
+    public static void main(String[] args) {
+        List<String> stringList = new ArrayList<String>();
+        FileInputStream fileInputStream = null;
+        BufferedReader bufferedReader = null;
+        
+        stringList = readAndSort(fileInputStream, bufferedReader);
+        
+        UpperWriter uw;
+		try {
+			uw = new UpperWriter("sorted.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+        
+        Collections.sort(stringList);
+        //Collections.sort(stringList);
+
+        for (String s : stringList) {
+            // Also add new line character
+        	bufferedWriter.write(s + System.lineSeparator());
+        }
+        //ReadSortWrite.readSortWrite("words.txt", uw);
+    }
+}
+
+interface Writer {
+	
+    void write(String s) throws IOException;
+    void close() throws IOException;
+}
+
+class UpperWriter implements Writer {
+    private String path;
+    //private FileWriter fileWriter;
+    BufferedWriter bufferedWriter;
+    
+    public UpperWriter(String path, BufferedWriter bufferedWriter) throws IOException {
+        this.path = path;
+        //fileWriter = new FileWriter(path);
+        this.bufferedWriter = bufferedWriter;
+    }
+    
+    public void write(String s) throws IOException {
+    	 this.bufferedWriter.append(s.toUpperCase());
+    }
+    
+    public void close() throws IOException {
+        
+    }
+}

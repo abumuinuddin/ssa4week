@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;HelloJetty.java&apos; to &apos;HelloJetty/src/gov.ssa.iron.yard.hello.jetty&apos;&#x0D;&#x0A;- Original project: &apos;HelloJetty&apos;&#x0D;&#x0A;- Destination element: &apos;HelloJetty/src/gov.ssa.iron.yard.hello.jetty&apos;&#x0D;&#x0A;- Original element: &apos;HelloJetty.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;gov.ssa.iron.yard.hello.jetty" element1="/src&lt;{HelloJetty.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1470343523727" units="1" version="1.0"/>
+</session>

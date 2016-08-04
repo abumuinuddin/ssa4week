@@ -1,0 +1,12 @@
+package gov.ssa.iron.yard.example;
+
+import java.nio.file.Files;
+
+public class HellowWorld {
+	
+
+	public static void main(String[] args) {
+
+		List<String> lines = Files.readAllLines("word.text");
+	}
+}

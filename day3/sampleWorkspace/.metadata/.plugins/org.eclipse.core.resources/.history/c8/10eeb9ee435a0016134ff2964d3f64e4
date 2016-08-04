@@ -1,0 +1,72 @@
+package gov.ssa.iron.yard;
+
+import java.util.Arrays;
+
+public class Stack{
+private int[] stackStore;
+private int len;
+
+	public int[] getStore() {
+		return stackStore;
+	}
+	
+	public void setStore(int[] store) {
+		this.stackStore = store;
+	}
+	
+	public int getLen() {
+		return len;
+	}
+	
+	public void setLen(int len) {
+		this.len = len;
+	}
+
+	public Stack() {
+	    this.stackStore = new int[10];
+	    this.len = 0;
+	}
+	
+
+	 public void push(int i) 
+	    {
+	        if (top == stackStore.length)
+	        {
+	            extendStack();
+	        }
+
+	        stackStore[top]= i;
+	        top++;
+	    }
+
+	    public int pop() 
+	    {
+	        top --;
+	        return stackStore[top];
+	    }
+
+	    private void extendStack()
+	    {
+
+	        stackStore=Arrays.copyOf(stackStore, stackStore.length+1); 
+
+	        
+
+		}
+	    
+	public static void main(String[] args) {
+		int newStackLen = 50;
+	    Stack st = new Stack();
+	    
+
+	    for (int i = 0; i < 50; i++) {
+	        st.push(i);
+	    }
+	
+	    for (int i = 0; i < 20; i++) {
+	        System.out.println(st.pop());
+	    }
+	}
+	
+}   
+

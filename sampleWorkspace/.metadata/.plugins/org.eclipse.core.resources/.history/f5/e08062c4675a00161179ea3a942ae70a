@@ -1,0 +1,29 @@
+package gov.ssa.iron.yard.example;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class HellowWorld {
+	
+
+	public static void main(String[] args) {
+		List<String> lines = null;
+
+		try {
+			lines = Files.readAllLines(Paths.get("word.text"), StandardCharsets.UTF_8);
+			for (String s : lines){
+				System.out.println(s);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Printing Stack Trace Again without System.Err --");
+			e.printStackTrace(System.err);
+		}
+		
+		lines.size();
+	}
+}

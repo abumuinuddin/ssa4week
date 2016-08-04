@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+C:\ssa4week\sampleWorkspace\.metadata\.plugins\org.eclipse.jdt.core
+1725636103.index
+1427942328.index

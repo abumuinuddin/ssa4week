@@ -1,0 +1,15 @@
+package gov.ssa.iron.yard.example;
+
+public class HellowWorld {
+	private String message;
+	
+
+	public static void main(String[] args) {
+		int [] arr = new int[7];
+		Object o = arr;
+		
+		Object[] aArr = new Object [10];
+		aArr[0] = 6;
+	}
+
+}

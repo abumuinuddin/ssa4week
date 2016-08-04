@@ -1,0 +1,9 @@
+1470331458381	Move file
+1470331476633	Move file
+1470332096014	Move file
+1470333345539	Extract method 'readFile'
+1470333638610	Extract method 'writeFile'
+1470336284958	Rename resource 'word.txt'
+1470337998349	Rename resource 'sort'
+1470338052790	Rename local variable 'fileName'
+1470339173340	Extract method 'readAndSort'

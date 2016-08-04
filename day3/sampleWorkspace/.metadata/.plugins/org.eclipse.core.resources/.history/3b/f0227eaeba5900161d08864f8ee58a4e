@@ -1,0 +1,13 @@
+package gov.ssa.iron.yard;
+
+public class Stack {
+	private int[] store;
+
+	public static void main(String[] args) {
+		Stack stack = new Stack();
+		//stack.
+		// TODO Auto-generated method stub
+
+	}
+
+}
